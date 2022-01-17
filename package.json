@@ -1,0 +1,18 @@
+{
+  "name": "root",
+  "version": "7.1.2-0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run --stream build",
+    "clean": "lerna run --parallel --stream clean",
+    "eslint": "lerna run --scope=bundle --scope=web-speech-cognitive-services --parallel --stream eslint",
+    "prepublishOnly": "lerna run --stream prepublishOnly",
+    "start": "npm run build && lerna run --parallel --stream start",
+    "test": "lerna run --ignore=playground --stream test"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
